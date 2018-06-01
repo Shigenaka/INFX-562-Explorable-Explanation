@@ -117,6 +117,22 @@
           <p>Image Courtesy - https://towardsdatascience.com</p>
           <p class = "lead">In general, bagging with ensemble models is a robust method for reducing the variance and overfitting of your learning models by utilizing bootstrap samples and aggregating the output (mean, median, other more complicated methods) of the learning ensembles. Bagging and ensembles are general and can be applied to any supervised model from neural networks to SVMs to decision trees, as well as unsupervised clustering models (to be covered in another article). In practice,
             M is chosen to be at least 50 and n is 80% of the size of the original dataset.</p>
+           <h3 class="mt-5">Majority Voting</h3>
+            <p class="lead">
+                Random Forests grows many classification trees. To classify a new object from an input vector,
+                put the input vector down each of the trees in the forest. Each tree gives a classification, and
+                we say the tree "votes" for that class. The forest chooses the classification having the most votes
+                (over all the trees in the forest). Each Tree is grown as follows:
+            <ol>
+                <li>If the number of cases in the training
+                    set is N, sample N cases at random - but with replacement, from the original data. This sample will be the training set for growing the tree.</li>
+                <li>If there are M input variables, a number m< M is specified such that at each node, m variables are selected at random out of the M and the best split
+                                                                  on these m is used to split the node. The value of m is held constant during the forest growing</li>
+                <li>Each tree is grown to the largest extent possible. There is no pruning</li>
+            </ol>
+            </p>
+            <img src="MajorityVotes.png">
+            <p>Image Courtesy - https://www.slideshare.net/</p>
         </div>
       </div>
     </div>
